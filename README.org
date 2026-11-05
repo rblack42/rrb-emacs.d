@@ -7,5 +7,5 @@ This project is designed to start beginning computer science students a minimakl
 
 *Elisp* is unlike other languages you will run into. It is a "List Processing language. In Lisp a list is a series of names or tokens separated by whitespace and surrounded by parentheses. Lists can be nested as long as the inner list is fully contained inside the outer list. It uses one very important concept, something that makes it unique and powerful: A list can be processed as code, or as data. If the list is to be treated as code, the first element in the list must name a function to be run, and all other elements are treated as arguments for the function to process. We will see what that means as we explore Emacs.
 
-[[./docs/sitemap.html][Table of COntents]]
+[[sitemap][Table of Contents]]
 

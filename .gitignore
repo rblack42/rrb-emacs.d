@@ -5,7 +5,8 @@
 *~
 *.swp
 
-# org-publish
-docs
+# org-publish:w
+
+
 emacs.d
 .org-timestamps
