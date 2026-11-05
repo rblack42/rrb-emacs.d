@@ -9,4 +9,4 @@ Getting started with Vim is fairly easy, and I still feel it is a good first edi
 
 In this note, I will introduce Emacs to beginners. Emacs has something of a bad reputation as a tool with a steep learning curve that you have to get through before you can use it effectively. I am going to try to get you using it immediately, then tune it so it becomes a much more comfortable and powerful tool. I could do this using Vim as well, but I want to show beginners a different programming language from the one they are probably learning. This one, Lisp, happens to be one of the oldest languages around. It looks very different from "conventional" languages, but it is very powerful. In fact most of what happens in Emacs is crafted using Emacs-lisp, which is a dialect of Lisp tuned to the needs of an editor.
 
-[[./sitemap.html][Table of Contents]]
+[[file:sitemap.org][Table of Contents]]
