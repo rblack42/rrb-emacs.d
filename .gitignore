@@ -1,0 +1,11 @@
+# Mac
+.DS_Store
+
+# Vim
+*~
+*.swp
+
+# org-publish
+docs
+emacs.d
+.org-timestamps
