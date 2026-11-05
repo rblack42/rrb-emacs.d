@@ -2,14 +2,20 @@
 
 ;; Load the publishing system
 (require 'package)
-(setq package-archives '(("melpa" . "https://melpa.org")
-                         ("elpa" . "https://gnu.org")))
+(setq package-user-dir (expand-file-name "./.packages"))
+(setq package-archives '(("melpa" . "https://melpa.org/packages/")
+                         ("elpa" . "https://elpa.gnu.org/packages/")))
 (package-initialize)
-(unless (package-installed-p 'htmlize)
-  (package-refresh-contents)
-  (package-install 'htmlize))
+(unless package-archive-contents
+  (package-refresh-contents))
+(package-install 'htmlize)
 
 (require 'ox-publish)
+;; Customize the HTML output
+(setq org-html-validation-link nil            ;; Don't show validation link
+      org-html-head-include-scripts nil       ;; Use our own scripts
+      org-html-head-include-default-style nil ;; Use our own styles
+      org-html-head "<link rel=\"stylesheet\" href=\"https://cdn.simplecss.org/simple.min.css\" />")
 
 ;; Customize your publishing projects
 (setq org-publish-project-alist
@@ -18,12 +24,12 @@
          :base-extension "org"
          :publishing-directory "./docs"
          :recursive t
+	 :time-stamp-file nil
          :publishing-function org-html-publish-to-html
          :headline-levels 4
          :auto-sitemap t
          :sitemap-title "Sitemap"
-         :html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"/simple.css\"/>"
-         :with-author nil
+         :with-author t
          :with-creator t
          :with-toc t
          :section-numbers nil)
