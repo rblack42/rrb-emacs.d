@@ -25,4 +25,5 @@ jobs:
         with:
           branch: gh-pages
           folder: docs
+          contents: write
 
